@@ -1,1 +1,74 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+  --btn-primary-color: rgb(124 58 237);
+  --primary-color: #d946ef;
+  --secondary-color: #7c3aed1a;
+  --dark-bg: rgb(15 23 42);
+  --tw-ring-offset-shadow: 0 0 #0000;
+}
+
+*{
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item{
+  list-style-type: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.nav-link{
+  text-decoration: none;
+  margin: 0 5px 0 5px;
+}
+
+.btn-primary{
+  background-color: var(--btn-primary-color) !important;
+  border: none !important;
+  outline: none !important;
+  height: 2.3rem;
+}
+
+.arr{
+  background: transparent;
+}
+
+.btn-secondary{
+  padding: 5px;
+  font-size: 14px;
+  color: var(--btn-primary-color);
+  background-color: var(--secondary-color);
+  border: none !important;
+  outline: none !important;
+  border-radius: 5px;
+}
+
+li{
+  list-style: none;
+}
+
+svg{
+  background: transparent;
+  color: var(--btn-primary-color);
+}
+
+.btn-tertiary{
+  color: var(--btn-primary-color);
+  border: none;
+  outline: none;
+}
+
+.profile-pic{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.accordion {
+  --bs-accordion-active-bg: transparent !important;
+}
