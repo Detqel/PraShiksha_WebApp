@@ -1,0 +1,17 @@
+.cart-btn{
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: var(--btn-primary-color);
+  background: var(--btn-primary-color);
+}
+
+.cart-icon{
+  background: var(--btn-primary-color);
+  color: white;
+  border-radius: 50%;
+}
+
+.header{
+  height: 75px;
+}

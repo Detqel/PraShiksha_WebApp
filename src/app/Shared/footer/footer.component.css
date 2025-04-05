@@ -1,0 +1,42 @@
+*{
+  background: transparent;
+  color: white;
+}
+
+.footer{
+  background-color: var(--dark-bg);
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+.desc-text{
+  font-weight: 500;
+  font-size: 14px;
+  color: gray;
+}
+
+hr {
+  width: 100%;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.socio-icons{
+  height: 30px;
+}
+
+.socio-col{
+  padding: 10px 0 0 10px;
+}
+
+.start-desc{
+  width: 250px;
+}

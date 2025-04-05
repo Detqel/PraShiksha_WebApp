@@ -1,0 +1,73 @@
+.course-card{
+  border: 1px solid #f2f2f2;
+  box-shadow: 3px 3px 3px rgb(205, 205, 205);
+  width: 300px;
+  padding: 10px;
+}
+
+.course-card:hover{
+  transform: scale(1.01);
+  transition: .3s ease-in-out;
+}
+
+.card-image{
+  width: 280px;
+  height: 160px;
+  background: url('/Images/GirlCourse.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+}
+
+.btn-secondary:hover{
+  transition: .5s ease-in-out;
+  background-color: var(--btn-primary-color);
+  color: white;
+}
+
+.pill {
+  position: absolute;
+  background-color: var(--btn-primary-color);
+  color: white;
+  padding: 5px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card-body{
+  width: 270px;
+}
+
+@media (max-width: 600px){
+  .course-card{
+    width: 450px;
+  }
+
+  h5{
+    font-size: 14px;
+  }
+
+  .course-heading p{
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px){
+  .course-card{
+    width: 360px;
+  }
+
+  h5{
+    font-size: 12px;
+  }
+
+  .course-heading p{
+    font-size: 10px;
+  }
+
+  .author-profile h5{
+    display: none;
+  }
+}
