@@ -1,7 +1,7 @@
 .faq-image{
   width: 450px;
   height: 450px;
-  background: url(/Images/6d44492ea5380243d4e7.jpg);
+  background: url('/assets/Images/6d44492ea5380243d4e7.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;

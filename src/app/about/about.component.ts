@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { AfterViewInit, Component, ElementRef, Inject, PLATFORM_ID, ViewChild } from '@angular/core';
 import { FooterComponent } from '../Shared/footer/footer.component';
 import { HeaderComponent } from '../Shared/header/header.component';
 import { InstructorsComponent } from '../Shared/instructors/instructors.component';
@@ -12,6 +12,8 @@ import { InstructorsComponent } from '../Shared/instructors/instructors.componen
   styleUrl: './about.component.css'
 })
 export class AboutComponent implements AfterViewInit {
+  isBrowser: boolean;
+  constructor(@Inject(PLATFORM_ID) platformId: Object) { this.isBrowser = isPlatformBrowser(platformId); }
   counters = [
     { value: 100, label: 'Courses', currentValue: 0 },
     { value: 12, label: 'Countries', currentValue: 0 },
@@ -22,6 +24,8 @@ export class AboutComponent implements AfterViewInit {
   @ViewChild('testimonialBanner') banner!: ElementRef;
 
   ngAfterViewInit() {
+    if (!this.isBrowser) return;
+    
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {

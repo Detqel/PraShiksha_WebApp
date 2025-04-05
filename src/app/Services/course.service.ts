@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
@@ -7,13 +8,18 @@ import { BehaviorSubject } from 'rxjs';
 export class CourseService {
   private courseKey = 'selectedCourse';
   private courseSubject = new BehaviorSubject<any>(null);
+  private isBrowser: boolean;
 
   course$ = this.courseSubject.asObservable();
 
-  constructor() {
-    const storedCourse = localStorage.getItem(this.courseKey);
-    if (storedCourse) {
-      this.courseSubject.next(JSON.parse(storedCourse));
+  constructor(@Inject(PLATFORM_ID) platformId: Object) {
+    this.isBrowser = isPlatformBrowser(platformId);
+
+    if (this.isBrowser) {
+      const storedCourse = localStorage.getItem(this.courseKey);
+      if (storedCourse) {
+        this.courseSubject.next(JSON.parse(storedCourse));
+      }
     }
   }
 
