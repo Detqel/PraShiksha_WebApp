@@ -1,0 +1,29 @@
+.faq-image{
+  width: 450px;
+  height: 450px;
+  background: url(/Images/6d44492ea5380243d4e7.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.faq-section{
+  width: 700px;
+}
+
+.pricing-card{
+  border-radius: 10px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.05);
+}
+
+.pricing-card:hover{
+  transform: scale(1.01);
+}
+
+.help-section{
+  margin: 7.5rem 0 5rem 0;
+}
+
+.faq-container{
+  margin: 7.5rem 0 5rem 0;
+}

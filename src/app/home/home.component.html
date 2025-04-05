@@ -1,1 +1,38 @@
-<p>home works!</p>
+<app-one-line-banner></app-one-line-banner>
+
+<app-header></app-header>
+
+<div class="main my-5 container d-flex flex-lg-row flex-column justify-content-evenly align-items-center flex-1 ps-2">
+  <div class="main-content">
+    <h4 class="golden-gradient-yellow mb-4">100% Satisfaction Guarantee</h4>
+    <h1 class="fw-bolder mb-3"><span class="primary-color-violet">Learn. Master. Succeed.</span> — Your Future, One Click Away!</h1>
+    <h5 class="mb-5">Discover a world of knowledge and opportunities with our online education platform pursue a new career.</h5>
+    <div class="d-flex align-items-center">
+      <button class="btn btn-primary me-3">Explore Courses <i class="arr bi bi-arrow-right"></i></button>
+      <a class="nav-link" href="https://www.youtube.com/watch?v=Rq8Usmgj80Y"><button class="btn btn-primary"><i class="me-2 arr bi bi-play-circle-fill"></i>Who we are?</button></a>
+    </div>
+  </div>
+  <div class="main-image">
+    <img src="/Images/StudentSideImage.png" class="img-md-fluid" alt="Student Side Image" width="600" height="600" />
+  </div>
+</div>
+
+<div #testimonialBanner class="testimonial-banner container-fluid d-flex flex-column flex-lg-row flex-md-row flex-wrap align-items-center justify-content-center mb-5">
+  <div class="testimonial-text" *ngFor="let item of counters">
+    <h2>{{ item.currentValue }}+</h2>
+    <h4>{{ item.label }}</h4>
+  </div>
+</div>
+
+<div class="my-5 text-center">
+  <h3 class="fw-bolder">Explore Our Best Courses</h3>
+  <h6>Your journey to success starts here—discover, learn, and grow with us!</h6>
+</div>
+
+<div class="container-fluid d-flex flex-wrap gap-5 justify-content-center p-0">
+  <app-course-card [course_detail]="course_detail"></app-course-card>
+</div>
+
+<app-instructors></app-instructors>
+
+<app-footer></app-footer>

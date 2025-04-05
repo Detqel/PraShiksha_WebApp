@@ -1,1 +1,15 @@
-<p>maintenance works!</p>
+<div class="maintenance-container d-flex flex-column align-items-center justify-content-center">
+  <img src="/Images/PraShiksha_Logo.png" class="logo" width="100" height="70" alt="Logo" />
+  <p class="title fw-bolder text-white">We Are Back Soon...</p>
+  <p class="desc">Discover a world of knowledge and opportunities with our online education platform pursue a new career.</p>
+
+  <div class="timer">
+    <div class="time-display">
+      <span>{{ hours | number: '2.0' }}:</span>
+      <span>{{ minutes | number: '2.0' }}:</span>
+      <span>{{ seconds | number: '2.0' }}</span>
+    </div>
+  </div>
+
+  <button class="btn btn-primary" (click)="navigateBackHome()">Go Back</button>
+</div>

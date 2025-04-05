@@ -1,0 +1,90 @@
+h5, h6{
+  color: gray;
+}
+
+.golden-gradient-yellow{
+  color: rgb(255, 170, 0);
+}
+
+.primary-color-violet{
+  color: var(--primary-color);
+}
+
+.testimonial-banner{
+  background-color: var(--btn-primary-color);
+  height: 7.5rem;
+}
+
+.testimonial-text{
+  background: transparent;
+  text-align: center;
+  color: white;
+  margin: 0 4rem 0 4rem;
+}
+
+.testimonial-text h2{
+  background: transparent;
+  font-weight: 600;
+}
+
+.testimonial-text h4{
+  background: transparent;
+}
+
+@media (max-width: 990px){
+  .testimonial-banner{
+    padding: 0;
+    height: 10rem;
+  }
+}
+
+@media (max-width: 830px){
+  .testimonial-banner{
+    padding: 0;
+    height: 10rem;
+  }
+}
+
+@media (max-width: 500px){
+  .testimonial-banner{
+    height: fit-content;
+  }
+
+  .testimonial-text{
+    margin: 2rem 0 2rem 0;
+  }
+}
+
+@media (max-width: 600px){
+  .main-image img{
+    width: 400px;
+    height: 400px;
+  }
+
+  .course-cards{
+    width: 450px;
+  }
+}
+
+@media (max-width: 480px){
+  h5{
+    font-size: 14px;
+  }
+
+  .main-image img{
+    width: 350px;
+    height: 350px;
+  }
+
+  .course-heading p{
+    font-size: 12px;
+  }
+
+  .author-profile h5{
+    display: none;
+  }
+
+  .course-cards{
+    width: 380px;
+  }
+}
