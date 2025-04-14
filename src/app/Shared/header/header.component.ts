@@ -1,15 +1,18 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../../Services/auth.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  constructor(private router: Router) {}
+  user$ = this.authService.user$;
+  constructor(private router: Router, private authService: AuthService) {}
 
   navigateToCart(){
     this.router.navigate(['/cart']);
@@ -17,5 +20,9 @@ export class HeaderComponent {
 
   navigateToLogin(){
     this.router.navigate(['/login']);
+  }
+
+  onLogout() {
+    this.authService.logout();
   }
 }

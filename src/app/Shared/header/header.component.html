@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg header d-flex justify-content-evenly sticky-top">
+<nav class="navbar navbar-expand-lg header d-flex justify-content-around sticky-top">
   <div class="container-fluid">
     <a class="navbar-brand nav-link d-flex align-items-center" href="/">
       <img src="assets/Images/PraShiksha_Logo.png" width="40" height="30" alt="Logo" />
@@ -23,9 +23,22 @@
           <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
           <li class="nav-item"><a class="nav-link" target="_blank" href="https://detqel.blog">Blog</a></li>
         </ul>
-        <div class="d-flex justify-content-center">
-          <button class="cart-btn btn btn-primary" (click)="navigateToCart()"><i class="cart-icon bi bi-cart3"></i></button>
-          <button class="ms-2 btn btn-primary" (click)="navigateToLogin()">Login</button>
+        <div class="d-flex justify-content-center align-items-center flex-wrap">
+          <ng-container *ngIf="user$ | async as user; else loginBtn">
+            <div class="btn-group dropstart">
+              <a class="cart-btn btn btn-primary" role="button" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="cart-icon bi bi-person-circle"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">{{user.displayName || user.email}}</a></li>
+                <li><a class="dropdown-item" href="/profile">Profile</a></li>
+                <li><a class="dropdown-item" href="#" (click)="onLogout()">Logout</a></li>
+              </ul>
+            </div>
+          </ng-container>
+          <ng-template #loginBtn>
+            <button class="ms-2 btn btn-primary" #loginBtn (click)="navigateToLogin()">Login</button>
+          </ng-template>
         </div>
       </div>
     </div>

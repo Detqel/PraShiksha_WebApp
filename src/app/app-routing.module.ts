@@ -5,8 +5,6 @@ import { RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { AppComponent } from './app.component';
 import { routes } from './app.routes';
-import { CartComponent } from './cart/cart.component';
-import { CheckoutComponent } from './checkout/checkout.component';
 import { ContactComponent } from './contact/contact.component';
 import { CoursesComponent } from './courses/courses.component';
 import { HomeComponent } from './home/home.component';
@@ -18,7 +16,7 @@ import { HeaderComponent } from './Shared/header/header.component';
 import { ImageCardComponent } from './Shared/image-card/image-card.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { OneLineBannerComponent } from './Shared/one-line-banner/one-line-banner.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -35,10 +33,9 @@ import { OneLineBannerComponent } from './Shared/one-line-banner/one-line-banner
     ContactComponent,
     PricingComponent,
     CoursesComponent,
-    CartComponent,
-    CheckoutComponent,
     LoginComponent,
     SignInComponent,
+    ReactiveFormsModule,
     CommonModule,
     BrowserModule, RouterModule.forRoot(routes)
   ]

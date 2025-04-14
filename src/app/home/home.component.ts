@@ -1,11 +1,12 @@
-import { AfterViewInit, Component, ElementRef, Inject, PLATFORM_ID, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, inject, Inject, PLATFORM_ID, ViewChild } from '@angular/core';
 import { InstructorsComponent } from "../Shared/instructors/instructors.component";
 import { CourseCardComponent } from "../Shared/course-card/course-card.component";
 import { FooterComponent } from "../Shared/footer/footer.component";
 import { HeaderComponent } from "../Shared/header/header.component";
 import { OneLineBannerComponent } from "../Shared/one-line-banner/one-line-banner.component";
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { User } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +17,9 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements AfterViewInit {
   isBrowser: boolean;
-    constructor(@Inject(PLATFORM_ID) platformId: Object, private router : Router) { this.isBrowser = isPlatformBrowser(platformId); }
+    constructor(@Inject(PLATFORM_ID) platformId: Object, private router : Router) {
+      this.isBrowser = isPlatformBrowser(platformId);
+    }
     counters = [
       { value: 100, label: 'Courses', currentValue: 0 },
       { value: 12, label: 'Countries', currentValue: 0 },

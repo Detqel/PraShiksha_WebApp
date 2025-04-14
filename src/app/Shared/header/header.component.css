@@ -15,3 +15,7 @@
 .header{
   height: 75px;
 }
+
+.btn-group .cart-btn{
+  border-radius: 50% !important;
+}
