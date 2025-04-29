@@ -5,7 +5,8 @@ import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
 import { initializeApp, provideFirebaseApp} from '@angular/fire/app';
 import { provideAuth, getAuth } from '@angular/fire/auth';
-import { getFirestore, provideFirestore } from '@angular/fire/firestore'
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { getDatabase, provideDatabase } from '@angular/fire/database';
 
 export const appConfig: ApplicationConfig = {
   providers: [provideRouter(routes), provideClientHydration(),
@@ -17,6 +18,7 @@ export const appConfig: ApplicationConfig = {
       "appId": "1:92972852980:web:0660d73067969a94cfa0a1",
       "measurementId": "G-J0XXTCGF3P"})),
       provideAuth(() => getAuth()),
-      provideFirestore(() => getFirestore())
+      provideFirestore(() => getFirestore()),
+      provideDatabase(() => getDatabase())
   ]
 };

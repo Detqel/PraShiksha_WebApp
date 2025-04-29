@@ -11,6 +11,9 @@ import { SingleCourseComponent } from './Shared/single-course/single-course.comp
 import { SignInComponent } from './sign-in/sign-in.component';
 import { AuthService } from './Services/auth.service';
 import { ProfileComponent } from './profile/profile.component';
+import { AuthGuard, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
+
+const redirectToLogin = () => redirectUnauthorizedTo(['login']);
 
 export const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -21,8 +24,8 @@ export const routes: Routes = [
   {path: 'courses', component: CoursesComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: SignInComponent},
-  {path: 'profile', component: ProfileComponent},
-  {path: 'course/:id', component: SingleCourseComponent},
+  {path: 'profile', component: ProfileComponent, canActivate: [AuthGuard], data: {authGuardPipe: redirectToLogin}},
+  {path: 'course/:id', component: SingleCourseComponent, canActivate: [AuthGuard], data: {authGuardPipe: redirectToLogin}},
   {path: 'maintenance', component: MaintenanceComponent},
   {path: '**', component: NotFoundComponent}
 ];

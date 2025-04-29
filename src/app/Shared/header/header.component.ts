@@ -14,10 +14,6 @@ export class HeaderComponent {
   user$ = this.authService.user$;
   constructor(private router: Router, private authService: AuthService) {}
 
-  navigateToCart(){
-    this.router.navigate(['/cart']);
-  }
-
   navigateToLogin(){
     this.router.navigate(['/login']);
   }
