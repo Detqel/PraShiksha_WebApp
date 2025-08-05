@@ -10,7 +10,7 @@ import { getDatabase, provideDatabase } from '@angular/fire/database';
 
 export const appConfig: ApplicationConfig = {
   providers: [provideRouter(routes), provideClientHydration(),
-    provideFirebaseApp(() => initializeApp({"apiKey": "AIzaSyBCaEmWWFsu6dZndXjbcLIaImLO9hLC8mA",
+    provideFirebaseApp(() => initializeApp({"apiKey": "",
       "authDomain": "prashiksha-12102.firebaseapp.com",
       "projectId": "prashiksha-12102",
       "storageBucket": "prashiksha-12102.firebasestorage.app",
